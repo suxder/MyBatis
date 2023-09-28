@@ -8,4 +8,12 @@
         insert into t_user values(null, "marina", "456",23,'f',"153456@qq.com")
     </insert>
 
+    <update id="updateUser">
+        update t_user set username = '宫若梅' where id = 1
+    </update>
+
+    <delete id="deleteUser">
+        delete from t_user where id = 4
+    </delete>
+
 </mapper>

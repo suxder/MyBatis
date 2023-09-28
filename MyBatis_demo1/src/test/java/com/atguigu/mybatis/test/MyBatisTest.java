@@ -9,6 +9,10 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 /**
  * @program: MyBatis
@@ -37,5 +41,19 @@ public class MyBatisTest {
 
         System.out.println("result:"+result);
     }
+
+    @Test
+    public void testUpdate() throws IOException {
+        InputStream is =  Resources.getResourceAsStream("mybatis-config.xml");
+        SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
+        SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(is);
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+
+        mapper.updateUser();
+    }
+
+
+
 
 }

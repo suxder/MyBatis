@@ -10,8 +10,17 @@ public interface UserMapper {
 
     /**
      * 添加用户信息
-     * sql写在映射文件中
      * @return int
      */
     int insertUser();
+
+    /**
+     * 修改用户信息
+     */
+    void updateUser();
+
+    /**
+     * 删除用户信息
+     */
+    void deleteUser();
 }
