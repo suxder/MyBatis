@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="com.atguigu.mybatis.test.MyBatisTest" time="0.591" errors="0" skipped="0">
+  <properties>
+    <property name="idea.version" value="2020.3.4"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="D:\devenv\Java\jdk-1.8\jre\bin"/>
+    <property name="java.vm.version" value="25.381-b09"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\code\MyBatis\MyBatis_demo1"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\code\MyBatis\MyBatis_demo1"/>
+    <property name="java.runtime.version" value="1.8.0_381-b09"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="D:\devenv\Java\jdk-1.8\jre\lib\endorsed"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.io.tmpdir" value="C:\Users\14394\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="maven.ext.class.path" value="D:\devtools\IntelliJ IDEA 2020.3.4\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="D:\devtools\IntelliJ IDEA 2020.3.4\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\devenv\Java\jdk-1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\software\Bandizip\;D:\devenv\Git\cmd;D:\devtools\TortoiseGit\bin;D:\devenv\nodejs\;D:\devenv\Java\jdk-1.8\bin;D:\devenv\apache-maven-3.8.8\bin;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\devtools\xshell\;D:\devtools\xftp\;C:\Program Files\MySQL\MySQL Server 8.1\bin;C:\Users\14394\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\14394\AppData\Local\Programs\Python\Python37-32\;C:\Users\14394\AppData\Local\Microsoft\WindowsApps;C:\Users\14394\AppData\Roaming\npm;D:\devenv\node_temp\node_global;;."/>
+    <property name="maven.conf" value="D:\devtools\IntelliJ IDEA 2020.3.4\plugins\maven\lib\maven3/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="maven.repo.local" value="D:\devenv\maven-local-repository"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\14394"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="14394"/>
+    <property name="java.class.path" value="D:\devtools\IntelliJ IDEA 2020.3.4\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;D:\devtools\IntelliJ IDEA 2020.3.4\plugins\maven\lib\maven3\boot\plexus-classworlds.license;D:\devtools\IntelliJ IDEA 2020.3.4\lib\idea_rt.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="D:\devenv\Java\jdk-1.8\jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2020.3.4 -Dmaven.repo.local=D:\devenv\maven-local-repository install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="1.8.0_381"/>
+    <property name="java.ext.dirs" value="D:\devenv\Java\jdk-1.8\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="D:\devenv\Java\jdk-1.8\jre\lib\resources.jar;D:\devenv\Java\jdk-1.8\jre\lib\rt.jar;D:\devenv\Java\jdk-1.8\jre\lib\jsse.jar;D:\devenv\Java\jdk-1.8\jre\lib\jce.jar;D:\devenv\Java\jdk-1.8\jre\lib\charsets.jar;D:\devenv\Java\jdk-1.8\jre\lib\jfr.jar;D:\devenv\Java\jdk-1.8\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.maintenance.version" value="5"/>
+    <property name="maven.home" value="D:\devtools\IntelliJ IDEA 2020.3.4\plugins\maven\lib\maven3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+  </properties>
+  <testcase classname="com.atguigu.mybatis.test.MyBatisTest" name="testMyBatis" time="0.591"/>
+</testsuite>
