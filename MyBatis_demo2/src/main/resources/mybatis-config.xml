@@ -25,6 +25,6 @@
     </environments>
     <!--引入映射文件-->
     <mappers>
-        <package name=""/>
+        <package name="com.jac.mybatis.mapper"/>
     </mappers>
 </configuration>
