@@ -8,4 +8,16 @@
         select * from t_user where id = #{id}
     </select>
 
+    <select id="getUserCount" resultType="java.lang.Integer">
+        select count(1) from t_user
+    </select>
+
+    <select id="getUserByIdToMap" resultType="java.util.Map">
+        select * from t_user where id = #{id}
+    </select>
+
+    <select id="getAllUserToMap" resultType="java.util.Map">
+        select * from t_user
+    </select>
+
 </mapper>
