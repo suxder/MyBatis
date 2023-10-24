@@ -3,6 +3,13 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jac.mybatis.mapper.SQLMapper">
+    <delete id="deleteBatch">
+        delete from t_user where id in (${ids})
+    </delete>
 
+
+    <select id="getUserByLike" resultType="com.jac.mybatis.pojo.User">
+        select * from t_user where username like CONCAT('%', #{username}, '%')
+    </select>
 
 </mapper>
