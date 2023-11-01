@@ -14,6 +14,25 @@ public interface SQLMapper {
      */
     List<User> getUserByLike(@Param("username") String username);
 
-
+    /**
+     * 批量删除
+     * @param ids
+     * @return
+     */
     int deleteBatch(@Param("ids") String ids);
+
+    /**
+     * 查询指定表中的数据
+     * @param tableName
+     * @return
+     */
+    List<User> getUserByTableName(@Param("tableName") String tableName);
+
+    /**
+     * insert UserInfo
+     * @param user
+     */
+    void insertUser(User user);
+
+
 }
