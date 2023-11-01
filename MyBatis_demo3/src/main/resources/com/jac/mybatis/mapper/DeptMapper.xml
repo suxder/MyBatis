@@ -8,5 +8,9 @@
         select * from t_dept where t_dept.did = #{did}
     </select>
 
+    <select id="getDeptAndEmpById" resultType="com.jac.mybatis.pojo.Dept">
+
+    </select>
+
 
 </mapper>
