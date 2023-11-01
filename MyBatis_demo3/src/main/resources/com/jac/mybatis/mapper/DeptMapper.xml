@@ -4,4 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jac.mybatis.mapper.DeptMapper">
 
+    <select id="getEmpAndDeptByIdStepTwo" resultType="com.jac.mybatis.pojo.Dept">
+        select * from t_dept where t_dept.did = #{did}
+    </select>
+
+
 </mapper>

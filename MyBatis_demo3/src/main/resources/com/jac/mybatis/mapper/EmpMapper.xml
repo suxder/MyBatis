@@ -12,7 +12,43 @@
         <result property="email" column="email"></result>
     </resultMap>
 
-
+    <!--解决多对一关系的方式-->
+    <!--1、级联属性赋值-->
+    <resultMap id="empAndDeptResultMapOne" type="Emp">
+        <id property="eid" column="eid"></id>
+        <result property="empName" column="emp_name"></result>
+        <result property="age" column="age"></result>
+        <result property="sex" column="sex"></result>
+        <result property="email" column="email"></result>
+        <result property="dept.did" column="did"></result>
+        <result property="dept.deptName" column="dept_name"></result>
+    </resultMap>
+    <!--2、association标签-->
+    <resultMap id="empAndDeptResultMapTwo" type="Emp">
+        <id property="eid" column="eid"></id>
+        <result property="empName" column="emp_name"></result>
+        <result property="age" column="age"></result>
+        <result property="sex" column="sex"></result>
+        <result property="email" column="email"></result>
+        <association property="dept" javaType="Dept">
+            <id property="did" column="did"></id>
+            <result property="deptName" column="dept_name"></result>
+        </association>
+    </resultMap>
+    
+    <resultMap id="empAndDeptStepResultMap" type="Emp">
+        <id property="eid" column="eid"></id>
+        <result property="empName" column="emp_name"></result>
+        <result property="age" column="age"></result>
+        <result property="sex" column="sex"></result>
+        <result property="email" column="email"></result>
+        <association property="dept"
+                     select="com.jac.mybatis.mapper.DeptMapper.getEmpAndDeptByIdStepTwo"
+                     column="did"
+                     fetchType="lazy"> <!--控制单个sql语句是否延迟加载（覆盖mybatis全局配置文件的配置）-->
+        </association>
+    </resultMap>
+    
     <select id="selectAllEmpOld" resultType="com.jac.mybatis.pojo.Emp">
         select * from t_emp
     </select>
@@ -20,5 +56,14 @@
     <select id="selectAllEmp" resultMap="empResultMap">
         select * from t_emp
     </select>
+
+    <select id="getEmpAndDeptById" resultMap="empAndDeptResultMapTwo">
+        select * from t_emp left join t_dept on t_emp.did = t_dept.did where t_emp.eid = #{eid}
+    </select>
+
+    <select id="getEmpAndDeptByIdStepOne" resultMap="empAndDeptStepResultMap">
+        select * from t_emp where t_emp.eid = #{eid}
+    </select>
+
 
 </mapper>

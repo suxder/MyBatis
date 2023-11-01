@@ -32,4 +32,26 @@ public class ResultMapTest {
         List<Emp> empList = mapper.selectAllEmp();
         empList.forEach(emp -> System.out.println(emp));
     }
+
+    @Test
+    public void testGetEmpAndDeptById() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
+
+        Emp emp = mapper.getEmpAndDeptById(1);
+        System.out.println(emp);
+    }
+
+    @Test
+    public void testGetEmpAndDeptByIdStep() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
+
+        Emp emp = mapper.getEmpAndDeptByIdStepOne(1);
+        System.out.println(emp.getEmpName());
+        System.out.println("-------------------------------");
+        System.out.println(emp.getDept().getDeptName());
+    }
+
+
 }
