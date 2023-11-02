@@ -65,5 +65,9 @@
         select * from t_emp where t_emp.eid = #{eid}
     </select>
 
+    <select id="getDeptAndEmpByIdStepTwo" resultType="com.jac.mybatis.pojo.Emp">
+        select * from t_emp where t_emp.did = #{did}
+    </select>
+
 
 </mapper>
