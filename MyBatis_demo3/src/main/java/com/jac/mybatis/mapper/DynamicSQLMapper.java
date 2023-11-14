@@ -7,7 +7,12 @@ import java.util.List;
 public interface DynamicSQLMapper {
 
     /**
-     * 多条件查询
+     * 多条件查询：test标签
      */
-    List<Emp> getEmpByCondition(Emp emp);
+    List<Emp> getEmpByConditionOne(Emp emp);
+
+    /**
+     * 多条件查询：where标签
+     */
+    List<Emp> getEmpByConditionTwo(Emp emp);
 }
