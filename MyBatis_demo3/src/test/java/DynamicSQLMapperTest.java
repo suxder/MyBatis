@@ -53,4 +53,13 @@ public class DynamicSQLMapperTest {
         empList.forEach(emp -> System.out.println(emp));
     }
 
+    @Test
+    public void testGetEmpByChoose() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
+
+        List<Emp> empList = mapper.getEmpByChoose(new Emp(null, "", 24, "", ""));
+        empList.forEach(emp -> System.out.println(emp));
+    }
+
 }

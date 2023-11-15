@@ -20,4 +20,9 @@ public interface DynamicSQLMapper {
      * 多条件查询：trim标签
      */
     List<Emp> getEmpByConditionThree(Emp emp);
+
+    /**
+     * 多条件查询：choose、when、otherwise标签
+     */
+    List<Emp> getEmpByChoose(Emp emp);
 }
