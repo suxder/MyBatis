@@ -23,6 +23,7 @@ public class DynamicSQLMapperTest {
      *      若where标签中有内容，则where标签会自动去掉内容前多余的and or等关键字
      *      若where标签中无内容，则where标签不会生效
      *      ！！！ 无法去掉内容后的and or 关键字
+     * 3、trim标签
      */
 
     @Test
@@ -42,4 +43,14 @@ public class DynamicSQLMapperTest {
         List<Emp> empList = mapper.getEmpByConditionTwo(new Emp(null, "", 24, "", ""));
         empList.forEach(emp -> System.out.println(emp));
     }
+
+    @Test
+    public void testGetEmpByConditionThree() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
+
+        List<Emp> empList = mapper.getEmpByConditionThree(new Emp(null, "", 24, "", ""));
+        empList.forEach(emp -> System.out.println(emp));
+    }
+
 }

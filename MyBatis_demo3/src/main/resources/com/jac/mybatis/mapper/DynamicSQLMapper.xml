@@ -38,4 +38,22 @@
         </where>
     </select>
 
+    <select id="getEmpByConditionThree" resultType="com.jac.mybatis.pojo.Emp">
+        select * from t_emp
+        <trim prefix="where" suffixOverrides="and|or">
+            <if test="empName != null and empName != ''">
+                t_emp.emp_name = #{empName} and
+            </if>
+            <if test="age != null and age != ''">
+                t_emp.age = #{age} and
+            </if>
+            <if test="sex != null and sex != ''">
+                t_emp.sex = #{sex} and
+            </if>
+            <if test="email != null and email != ''">
+                t_emp.email = #{email}
+            </if>
+        </trim>
+    </select>
+
 </mapper>
