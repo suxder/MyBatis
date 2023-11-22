@@ -1,12 +1,14 @@
 package com.jac.mybatis.pojo;
 
+import java.io.Serializable;
+
 /**
  * @program: MyBatis
  * @description: 员工实体类
  * @author: Leslie
  * @create: 2023-10-31 15:24
  **/
-public class Emp {
+public class Emp implements Serializable { // 实体类实现序列化接口
 
     private Integer eid;
 
